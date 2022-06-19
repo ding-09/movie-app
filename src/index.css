@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
 :root {
-  --primary-white-bg: #faf9f9;
+  --primary-white: #faf9f9;
   --primary-dark-bg: #1b1b1b;
   --modal-bg: #121212;
   --primary-red: #ef233c;
@@ -30,4 +30,9 @@ input, button {
   font-family: inherit;
 }
 
+a {
+  color: var(--primary-white);
+
+  text-decoration: none;
+}
 
