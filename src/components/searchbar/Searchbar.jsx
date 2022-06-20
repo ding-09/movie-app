@@ -24,6 +24,8 @@ const Searchbar = ({ toggleHeader }) => {
     const url = `http://www.omdbapi.com/?apikey=${apiKey}&s=${name}`;
     const response = await axios.get(url);
     setMedia(response.data);
+
+    // movie data
     console.log(response.data)
   };
 
