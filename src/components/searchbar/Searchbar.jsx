@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Form, InputGroup } from './style';
 import { FaTimes } from 'react-icons/fa';
+import { useMovieResults } from '../../providers/MovieResultsProvider';
 
 const Searchbar = ({ toggleHeader }) => {
+  const resultsContext = useMovieResults();
+
   const [searchName, setSearchName] = useState('');
-  const [media, setMedia] = useState('');
 
   // handle form events
   const handleChange = (e) => {
@@ -23,10 +25,7 @@ const Searchbar = ({ toggleHeader }) => {
   const searchByName = async (name) => {
     const url = `//www.omdbapi.com/?apikey=${apiKey}&s=${name}`;
     const response = await axios.get(url);
-    setMedia(response.data);
-
-    // movie data
-    console.log(response.data)
+    resultsContext.setMovieResults(response.data);
   };
 
   return (
