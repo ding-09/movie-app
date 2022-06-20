@@ -21,7 +21,7 @@ const Searchbar = ({ toggleHeader }) => {
   const apiKey = '8b97ec88';
 
   const searchByName = async (name) => {
-    const url = `http://www.omdbapi.com/?apikey=${apiKey}&s=${name}`;
+    const url = `//www.omdbapi.com/?apikey=${apiKey}&s=${name}`;
     const response = await axios.get(url);
     setMedia(response.data);
 
