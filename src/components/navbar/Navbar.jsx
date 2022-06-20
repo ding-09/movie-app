@@ -4,7 +4,7 @@ import logo from '../../assets/logo.svg';
 import { BiSearch } from 'react-icons/bi';
 import {Nav, RightNavGroup} from './style'
 
-const Navbar = () => {
+const Navbar = ({toggleHeader}) => {
   return (
     <Nav>
       <figure>
@@ -13,7 +13,7 @@ const Navbar = () => {
         </Link>
       </figure>
       <RightNavGroup>
-        <BiSearch color='#faf9f9' size={'16px'} />
+        <BiSearch color='#faf9f9' size={'16px'} onClick={toggleHeader}/>
         <Link to='/favorites'>My Favorites</Link>
       </RightNavGroup>
     </Nav>

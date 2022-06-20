@@ -1,11 +1,22 @@
-import React from 'react';
-import Navbar from '../navbar'
+import React, { useState } from 'react';
+import Navbar from '../navbar';
+import Searchbar from '../searchbar';
 import { HeaderContainer } from './style';
 
 const Header = () => {
+  const [showSearchbar, setShowSearchbar] = useState(false);
+
+  const toggleHeader = () => {
+    setShowSearchbar(!showSearchbar);
+  };
+
   return (
     <HeaderContainer>
-      <Navbar />
+      {showSearchbar ? (
+        <Searchbar toggleHeader={toggleHeader} />
+      ) : (
+        <Navbar toggleHeader={toggleHeader} />
+      )}
     </HeaderContainer>
   );
 };

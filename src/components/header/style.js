@@ -8,4 +8,5 @@ export const HeaderContainer = styled.header`
   align-items: center;
   padding: 0 2.4rem;
   font-size: 1.2rem;
+  position: relative;
 `;
