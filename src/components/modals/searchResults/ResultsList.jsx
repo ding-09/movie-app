@@ -1,17 +1,15 @@
 import React from 'react';
 import ListItem from './ListItem';
-import { useMovieResults } from '../../../providers/MovieResultsProvider';
-import { Modal } from './style';
 
-const ResultsList = () => {
-  const resultsContext = useMovieResults();
-  const searchResults = resultsContext.movieResults.Search;
+
+
+const ResultsList = ({searchResults}) => {
   return (
-    <Modal>
+    <>
       {searchResults &&
         searchResults.map(movie => <ListItem movie={movie}/>)
       }
-    </Modal>
+    </>
   );
 };
 
