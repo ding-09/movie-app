@@ -14,10 +14,9 @@ export const MovieResultsProvider = ({ children }) => {
 };
 
 export const useMovieResults = () => {
-  const context = useContext(MovieResultsContext)
+  const context = useContext(MovieResultsContext);
   if (context === undefined) {
-    throw new Error('undefined context')
+    throw new Error('undefined context');
   }
   return context;
-}
-
+};

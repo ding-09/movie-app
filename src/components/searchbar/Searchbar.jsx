@@ -19,6 +19,16 @@ const Searchbar = ({ toggleHeader }) => {
     searchByName(searchName);
   };
 
+  const handleClose = () => {
+    toggleHeader();
+
+    // reset search
+    setSearchName('');
+
+    // reset results in context to empty array
+    resultsContext.setMovieResults([]);
+  };
+
   // movie search function
   const apiKey = '8b97ec88';
 
@@ -39,7 +49,7 @@ const Searchbar = ({ toggleHeader }) => {
           placeholder='Search movie, TV show, IMDB ID'
           onChange={handleChange}
         />
-        <FaTimes color='#faf9f9' size={'14px'} onClick={toggleHeader} />
+        <FaTimes color='#faf9f9' size={'14px'} onClick={handleClose} />
       </InputGroup>
     </Form>
   );
