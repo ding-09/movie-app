@@ -2,13 +2,16 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   color: var(--primary-white);
-  padding: 2.4rem 2rem 0;
+  margin-bottom: 2.4rem;
   .category-heading {
     font-size: 1.6rem;
   }
   .movie-title {
     font-size: 1.2rem;
     margin-top: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   /* CAROUSEL STYLES */

@@ -19,11 +19,13 @@
 
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 0.2px;
+  position: relative;
 }
 
 input,
@@ -41,6 +43,10 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .movie-title {

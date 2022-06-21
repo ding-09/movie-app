@@ -1,3 +1,3 @@
-import testing from './testing'
+import Footer from './Footer'
 
-export default testing
+export default Footer
