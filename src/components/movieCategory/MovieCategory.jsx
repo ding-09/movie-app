@@ -1,12 +1,32 @@
-import React from 'react'
-import {} from './style'
+import React, { useState } from 'react';
+import {} from './style';
+import Carousel from '../carousel';
 
-const MovieCategory = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+// import required Swiper modules and styles
+import { SwiperSlide } from 'swiper/react';
 
-export default MovieCategory
+import blankImg from '../../assets/No-Image-Placeholder.svg.png';
+
+import { Container } from './style';
+
+const MovieCategory = ({ category }) => {
+  return (
+    <Container>
+      <h2 className='category-heading'>{category.heading}</h2>
+      <Carousel>
+        {category.movies.map((movie) => (
+          <SwiperSlide>
+            <img src={blankImg} alt={movie} />
+            <h3 className='movie-title'>{movie}</h3>
+          </SwiperSlide>
+        ))}
+      </Carousel>
+    </Container>
+  );
+};
+
+export default MovieCategory;
+
+// fetch(url+name)
+// detailed movie info - {}
+// where to store it?

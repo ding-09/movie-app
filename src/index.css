@@ -26,7 +26,8 @@ body {
   letter-spacing: 0.2px;
 }
 
-input, button {
+input,
+button {
   font-family: inherit;
 }
 
@@ -39,9 +40,10 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
-h1 {
+.movie-title {
   font-family: 'Roboto Mono', monospace;
   letter-spacing: 0.5px;
 }
