@@ -14,8 +14,8 @@ const MovieCategory = ({ category }) => {
     <Container>
       <h2 className='category-heading'>{category.heading}</h2>
       <Carousel>
-        {category.movies.map((movie) => (
-          <SwiperSlide>
+        {category.movies.map((movie, idx) => (
+          <SwiperSlide key={idx}>
             <img src={blankImg} alt={movie} />
             <h3 className='movie-title'>{movie}</h3>
           </SwiperSlide>

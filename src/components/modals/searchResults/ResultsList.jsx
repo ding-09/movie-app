@@ -1,14 +1,11 @@
 import React from 'react';
 import ListItem from './ListItem';
 
-
-
-const ResultsList = ({searchResults}) => {
+const ResultsList = ({ searchResults }) => {
   return (
     <>
       {searchResults &&
-        searchResults.map(movie => <ListItem movie={movie}/>)
-      }
+        searchResults.map((movie, idx) => <ListItem movie={movie} key={idx}/>)}
     </>
   );
 };

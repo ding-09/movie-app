@@ -7,8 +7,8 @@ import movieCategoryData from '../../utils/movieCategoryData';
 const HomePage = () => {
   return (
     <HomePageContainer>
-      {movieCategoryData.map((category) => (
-        <MovieCategory category={category} />
+      {movieCategoryData.map((category, idx) => (
+        <MovieCategory category={category} key={idx} />
       ))}
     </HomePageContainer>
   );
