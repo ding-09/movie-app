@@ -4,8 +4,9 @@ import ListItem from './ListItem';
 const ResultsList = ({ searchResults }) => {
   return (
     <>
-      {searchResults &&
-        searchResults.map((movie, idx) => <ListItem movie={movie} key={idx}/>)}
+      {searchResults.map((movie, idx) => (
+        <ListItem movie={movie} key={idx} />
+      ))}
     </>
   );
 };

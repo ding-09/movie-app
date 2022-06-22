@@ -2,14 +2,17 @@ import styled from 'styled-components';
 
 export const Modal = styled.section`
   background-color: var(--primary-dark-bg);
-  min-height: 100vh;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  z-index: 999;
+  min-width: 100%;
 `;
 
 export const ListItemContainer = styled.article`
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   padding: 1.2rem;
-
 `;
 
 export const Figure = styled.figure`

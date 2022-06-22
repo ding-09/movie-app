@@ -1,13 +1,12 @@
 import React from 'react';
 import ResultsList from './ResultsList';
-import { useMovieResults } from '../../../providers/MovieResultsProvider';
-import { Modal } from './style'
+import { Modal } from './style';
 
-const SearchResultsModal = () => {
-  const resultsContext = useMovieResults();
-  const searchResults = resultsContext.movieResults.Search;
+const SearchResultsModal = ({ searchResults }) => {
+  // const resultsContext = useMovieResults();
+  // const searchResults = resultsContext.movieResults.Search;
   return (
-    searchResults && (
+    searchResults.length > 0 && (
       <Modal>
         <ResultsList searchResults={searchResults} />
       </Modal>
