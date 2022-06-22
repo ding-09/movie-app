@@ -12,7 +12,7 @@ import { Container } from './style';
 const MovieCategory = ({ category }) => {
   return (
     <Container>
-      <h2 className='category-heading'>{category.heading}</h2>
+      <h2 className='sub-heading'>{category.heading}</h2>
       <Carousel>
         {category.movies.map((movie, idx) => (
           <SwiperSlide key={idx}>

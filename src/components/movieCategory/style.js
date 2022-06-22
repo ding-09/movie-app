@@ -2,22 +2,12 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   color: var(--primary-white);
-  margin-bottom: 2.4rem;
-  .category-heading {
-    font-size: 1.6rem;
-  }
+  margin-bottom: 2.6rem;
   .movie-title {
-    font-size: 1.2rem;
     margin-top: 0.8rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   /* CAROUSEL STYLES */
-  .swiper-container {
-    margin-top: 1.4rem;
-  }
   .swiper-slide {
     text-align: center;
   }

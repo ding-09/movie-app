@@ -26,6 +26,13 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 0.2px;
   position: relative;
+  min-height: 100vh;
+  padding-bottom: 14rem;
+  background-color: rgba(27, 27, 27, 0.98);
+}
+
+main {
+  padding: 2.6rem 2rem;
 }
 
 input,
@@ -51,5 +58,14 @@ ul {
 
 .movie-title {
   font-family: 'Roboto Mono', monospace;
+  font-size: 1.2rem;
   letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sub-heading {
+  font-size: 1.6rem;
+  margin-bottom: 1.4rem;
 }
