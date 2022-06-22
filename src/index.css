@@ -33,6 +33,7 @@ body {
 
 main {
   padding: 2.6rem 2rem;
+  color: var(--primary-white);
 }
 
 input,
