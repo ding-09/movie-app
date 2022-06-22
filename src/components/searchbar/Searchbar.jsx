@@ -5,14 +5,6 @@ import { FaTimes } from 'react-icons/fa';
 import SearchResultsModal from '../modals/searchResults';
 
 const Searchbar = ({ toggleHeader }) => {
-  // ref for search input field
-  const searchInput = useRef(null);
-
-  // make input field focused on component moun
-  useEffect(() => {
-    searchInput.current.focus();
-  }, []);
-
   // state for movie name
   const [movieName, setMovieName] = useState('');
 
@@ -51,7 +43,7 @@ const Searchbar = ({ toggleHeader }) => {
       <Form onSubmit={handleSubmit}>
         <InputGroup>
           <input
-            ref={searchInput}
+            autoFocus
             type='text'
             name='search'
             value={movieName}
