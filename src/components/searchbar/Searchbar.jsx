@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { Form, InputGroup } from './style';
 import { FaTimes } from 'react-icons/fa';
 import SearchResultsModal from '../modals/searchResults';
 
 const Searchbar = ({ toggleHeader }) => {
-  // const resultsContext = useMovieResults();
+  // ref for search input field
+  const searchInput = useRef(null);
+
+  // make input field focused on component moun
+  useEffect(() => {
+    searchInput.current.focus();
+  }, []);
 
   // state for movie name
   const [movieName, setMovieName] = useState('');
@@ -45,6 +51,7 @@ const Searchbar = ({ toggleHeader }) => {
       <Form onSubmit={handleSubmit}>
         <InputGroup>
           <input
+            ref={searchInput}
             type='text'
             name='search'
             value={movieName}
