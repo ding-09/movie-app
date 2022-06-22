@@ -32,7 +32,7 @@ const Searchbar = ({ toggleHeader }) => {
   };
 
   // movie search function
-  const apiKey = '8b97ec88';
+  const apiKey = process.env.REACT_APP_API_KEY;
 
   const getMoviesByName = async (name) => {
     const url = `//www.omdbapi.com/?apikey=${apiKey}&s=${name}`;
