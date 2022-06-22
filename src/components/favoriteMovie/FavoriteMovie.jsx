@@ -14,7 +14,7 @@ const FavoriteMovie = () => {
         <div className='misc-info'>
           Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
         </div>
-        <p>
+        <p className='cast-info'>
           <span>Cast:</span> Actor1, Actor2, Actor3
         </p>
         <button className='like-btn'>
