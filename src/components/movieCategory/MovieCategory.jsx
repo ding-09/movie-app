@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import {} from './style';
+import { Container } from './style';
 import Carousel from '../carousel';
 
 // import required Swiper modules and styles
 import { SwiperSlide } from 'swiper/react';
 
 import blankImg from '../../assets/No-Image-Placeholder.svg.png';
-
-import { Container } from './style';
 
 const MovieCategory = ({ category }) => {
   return (
@@ -16,8 +14,8 @@ const MovieCategory = ({ category }) => {
       <Carousel>
         {category.movies.map((movie, idx) => (
           <SwiperSlide key={idx}>
-            <img src={blankImg} alt={movie} />
-            <h3 className='movie-title'>{movie}</h3>
+            <img src={movie.poster} alt={movie.title} />
+            <h3 className='movie-title'>{movie.title}</h3>
           </SwiperSlide>
         ))}
       </Carousel>

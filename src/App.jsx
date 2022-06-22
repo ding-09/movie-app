@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 import Footer from './components/footer';
@@ -16,7 +16,7 @@ const App = () => {
           <Route path='*' element='Page not found!' />
         </Routes>
       </main>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 };
