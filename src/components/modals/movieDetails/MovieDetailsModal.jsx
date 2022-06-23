@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { ModalContainer, Figure, MainInfo, SubInfo } from './style';
 import { FaTimes } from 'react-icons/fa';
 import { IoIosHeart } from 'react-icons/io';
-import { TbHeartOff } from 'react-icons/tb'
+import { TbHeartOff } from 'react-icons/tb';
 import { AiFillStar } from 'react-icons/ai';
+import { BsDot } from 'react-icons/bs';
 import { useMovies } from '../../../providers/MoviesProvider';
 
 const MovieDetailsModal = ({ movieData, closeModal }) => {
@@ -46,7 +47,7 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
       <MainInfo>
         <h1 className='movie-title'>{Title}</h1>
         <div className='misc-info'>
-          {Year} - {Rated} - {Runtime} - {Type}
+          {Year} <BsDot /> {Rated} <BsDot /> {Runtime} <BsDot /> {Type}
         </div>
         <div className='rating'>
           <AiFillStar />

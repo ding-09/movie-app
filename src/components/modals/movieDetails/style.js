@@ -46,6 +46,12 @@ export const MainInfo = styled.section`
     font-size: 1.1rem;
     opacity: 0.6;
     text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    svg {
+      font-size: 1.4rem;
+      position: static;
+    }
   }
   .rating {
     grid-area: rating;
@@ -107,7 +113,8 @@ export const SubInfo = styled.section`
     opacity: 0.6;
     font-size: 1.2rem;
   }
-  .cast, .genre {
+  .cast,
+  .genre {
     font-size: 1.1rem;
     span {
       opacity: 0.6;
