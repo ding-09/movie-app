@@ -1,12 +1,19 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
+import { getFavoriteMovies } from '../utils/favorites';
 
 const MoviesContext = createContext();
 
 const MoviesProvider = ({ children }) => {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState();
+
+  useEffect(() => {
+    const storage = getFavoriteMovies();
+    setMovies(storage);
+  }, []);
 
   const addMovie = (movie) => {
     setMovies([...movies, movie]);
+    localStorage.setItems('favorites', JSON.stringify(movies))
     return movies;
   };
 

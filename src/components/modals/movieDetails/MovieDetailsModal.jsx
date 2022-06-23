@@ -3,6 +3,7 @@ import { ModalContainer, Figure, MainInfo, SubInfo } from './style';
 import { FaTimes } from 'react-icons/fa';
 import { IoIosHeart } from 'react-icons/io';
 import { AiFillStar } from 'react-icons/ai';
+import { useMovies } from '../../../providers/MoviesProvider';
 
 const MovieDetailsModal = ({ movieData, closeModal }) => {
   const {
@@ -17,6 +18,16 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
     Type,
     imdbRating,
   } = movieData;
+
+  // MOVIES CONTEXT
+  const { addMovie } = useMovies();
+
+  // add to storage
+  const addToStorage = (movie) => {
+    const movies = JSON.parse(localStorage.getItem('favorites')) ?? [];
+    movies.push(movie);
+    localStorage.setItem('favorites', JSON.stringify(movies));
+  };
 
   return (
     <ModalContainer>
@@ -34,7 +45,13 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
           <span className='rated'>{imdbRating} </span>
           <span className='total'> / 10</span>
         </div>
-        <button className='fav-btn'>
+        <button
+          className='fav-btn'
+          onClick={() => {
+            addMovie(movieData);
+            addToStorage(movieData);
+          }}
+        >
           <IoIosHeart />
           Add to favorites
         </button>
