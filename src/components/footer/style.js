@@ -19,9 +19,15 @@ export const SocialIconsGroup = styled.ul`
   li a svg {
     font-size: 1.6rem;
     display: flex;
+    @media screen and (min-width: 768px) {
+      font-size: 2.2rem;
+    }
   }
 `;
 
 export const Copyright = styled.p`
   opacity: 0.6;
+  @media screen and (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;

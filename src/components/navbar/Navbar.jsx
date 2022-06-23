@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo-2.svg';
 import { BiSearch } from 'react-icons/bi';
 import {Nav, RightNavGroup} from './style'
 
