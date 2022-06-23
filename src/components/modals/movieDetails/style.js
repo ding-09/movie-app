@@ -90,7 +90,7 @@ export const MainInfo = styled.section`
       'title title title button'
       'miscInfo miscInfo . rating'
       'line line line line';
-    column-gap: 2rem;
+    column-gap: 1rem;
     margin-bottom: 0;
   }
   @media screen and (min-width: 880px) {
