@@ -9,4 +9,12 @@ export const HeaderContainer = styled.header`
   padding: 0 2.4rem;
   font-size: 1.2rem;
   position: relative;
+  @media screen and (min-width: 768px) {
+    padding-left: 4rem;
+    padding-right: 4.9rem;
+    font-size: 1.4rem;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 0 5rem;
+  }
 `;

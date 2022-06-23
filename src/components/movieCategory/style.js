@@ -7,6 +7,14 @@ export const Container = styled.div`
     margin-top: 1rem;
     padding: 0 0.5rem;
   }
+  @media screen and (min-width: 768px){
+    .movie-title {
+      font-size: 1.4rem;
+    }
+    .sub-heading {
+      font-size: 2rem;
+    }
+  }
 
   /* CAROUSEL STYLES */
   .swiper-slide {

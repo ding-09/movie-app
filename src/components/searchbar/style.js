@@ -25,4 +25,18 @@ export const InputGroup = styled.div`
     bottom: 0;
     margin: auto;
   }
+  @media screen and (min-width: 768px) {
+    input {
+      font-size: 1.4rem;
+      padding: 2rem;
+    }
+    svg {
+      right: 2.4rem;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    input {
+      font-size: 1.6rem;
+    }
+  }
 `;

@@ -17,6 +17,21 @@ export const ModalContainer = styled.div`
     top: 2rem;
     right: 1.8rem;
     font-size: 1.6rem;
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+      top: 2.4rem;
+      right: 2.4rem;
+    }
+    @media screen and (min-width: 992px) {
+      font-size: 2rem;
+      top: 3rem;
+      right: 4rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 2rem;
+      top: 5rem;
+      right: 8rem;
+    }
   }
 
   @media screen and (min-width: 480px) {
@@ -30,6 +45,14 @@ export const ModalContainer = styled.div`
       'mainInfo mainInfo'
       'poster subInfo';
   }
+
+  @media screen and (min-width: 992px) {
+    padding: 10rem 12rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 14rem 16rem;
+  }
 `;
 
 export const Figure = styled.figure`
@@ -42,11 +65,12 @@ export const Figure = styled.figure`
       width: 100%;
     }
     @media screen and (min-width: 768px) {
-      width: 40rem;
+      width: 35rem;
+      max-height: 45rem;
     }
   }
   @media screen and (min-width: 768px) {
-    margin-right: 4rem;
+    margin-right: 3.2rem;
   }
 `;
 
@@ -60,17 +84,37 @@ export const MainInfo = styled.section`
     'miscInfo miscInfo rating'
     'title title title';
   @media screen and (min-width: 768px) {
+    justify-content: space-between;
     grid-template-columns: 2fr 1fr 1fr 2fr;
     grid-template-areas:
       'title title title button'
-      'miscInfo rating . .'
+      'miscInfo miscInfo . rating'
       'line line line line';
+    column-gap: 2rem;
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 880px) {
+    row-gap: 2rem;
+    margin-bottom: 1rem;
+    column-gap: 4rem;
+  }
+  @media screen and (min-width: 880px) {
+    column-gap: 10rem;
   }
   .movie-title {
     grid-area: title;
     padding: 0;
     margin-top: 1.4rem;
     font-size: 1.6rem;
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+    }
+    @media screen and (min-width: 880px) {
+      margin-top: 0;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 2.4rem;
+    }
   }
   .misc-info {
     grid-area: miscInfo;
@@ -82,6 +126,12 @@ export const MainInfo = styled.section`
     svg {
       font-size: 1.4rem;
       position: static;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 1.4rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 1.6rem;
     }
   }
   .rating {
@@ -106,7 +156,11 @@ export const MainInfo = styled.section`
     }
 
     @media screen and (min-width: 768px) {
-      justify-self: start;
+      justify-self: end;
+      font-size: 1.4rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 1.6rem;
     }
   }
   .btn {
@@ -142,6 +196,12 @@ export const MainInfo = styled.section`
     min-width: 100%;
     margin: 1.4rem 0;
     background-color: rgba(255, 255, 255, 0.5);
+    @media screen and (min-width: 768px) {
+      margin: 1.2rem 0 1rem;
+    }
+    @media screen and (min-width: 1200px) {
+      margin: 0 0 2rem;
+    }
   }
 `;
 
@@ -162,5 +222,25 @@ export const SubInfo = styled.section`
   }
   .cast {
     margin-bottom: 1rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    .plot {
+      font-size: 1.6rem;
+    }
+    .cast,
+    .genre {
+      font-size: 1.4rem;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 80%;
+    .plot {
+      font-size: 1.8rem;
+    }
+    .cast,
+    .genre {
+      font-size: 1.6rem;
+    }
   }
 `;
