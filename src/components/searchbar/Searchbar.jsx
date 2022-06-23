@@ -18,7 +18,15 @@ const Searchbar = ({ toggleHeader }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    getMoviesByName(movieName);
+
+    // check to see if user entered id or name
+    // check id against regex pattern
+    const pattern = /\btt\d{7,}/;
+    if (pattern.test(movieName)) {
+      getMovieById(movieName);
+    } else {
+      getMoviesByName(movieName);
+    }
   };
 
   const handleClose = () => {
@@ -36,6 +44,12 @@ const Searchbar = ({ toggleHeader }) => {
     const url = `//www.omdbapi.com/?apikey=${apiKey}&s=${name}`;
     const response = await axios.get(url);
     setSearchResults(response.data.Search);
+  };
+
+  const getMovieById = async (id) => {
+    const url = `//www.omdbapi.com/?apikey=${apiKey}&i=${id}`;
+    const response = await axios.get(url);
+    setSearchResults([response.data]);
   };
 
   return (
