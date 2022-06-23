@@ -16,8 +16,11 @@ const MoviesProvider = ({ children }) => {
     return movies;
   };
 
-  const removeMovie = (movieTitle) => {
-    setMovies(movies.filter((movie) => movie.Title !== movieTitle));
+  const removeMovie = (rmMovie) => {
+    const newMovies = movies.filter(
+      (movie) => movie.imdbID !== rmMovie.imdbID
+    );
+    setMovies(newMovies);
     return movies;
   };
 

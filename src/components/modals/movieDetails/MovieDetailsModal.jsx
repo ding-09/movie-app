@@ -24,13 +24,21 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
   const [favBtn, showFavBtn] = useState(true);
 
   // MOVIES CONTEXT
-  const { addMovie } = useMovies();
+  const { addMovie, removeMovie } = useMovies();
 
   // add to storage
   const addToStorage = (movie) => {
     const movies = JSON.parse(localStorage.getItem('favorites')) ?? [];
     movies.push(movie);
     localStorage.setItem('favorites', JSON.stringify(movies));
+  };
+
+  const removeFromStorage = (movie) => {
+    const movies = JSON.parse(localStorage.getItem('favorites')) ?? [];
+    const newMovies = movies.filter(
+      (storedMovie) => storedMovie.imdbID !== movie.imdbID
+    );
+    localStorage.setItem('favorites', JSON.stringify(newMovies));
   };
 
   // toggle button state
@@ -70,6 +78,8 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
           <button
             className='btn remove-btn'
             onClick={() => {
+              removeMovie(movieData);
+              removeFromStorage(movieData);
               toggleBtn();
             }}
           >
