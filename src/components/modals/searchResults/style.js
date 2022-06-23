@@ -7,6 +7,13 @@ export const Modal = styled.section`
   left: 0;
   z-index: 999;
   min-width: 100%;
+  .error  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    color: var(--secondary-red);
+  }
 `;
 
 export const ListItemContainer = styled.article`

@@ -21,7 +21,7 @@ const Searchbar = ({ toggleHeader }) => {
 
     // check to see if user entered id or name
     // check id against regex pattern
-    const pattern = /\btt\d{7,}/;
+    const pattern = /\btt\d{5,}/;
     if (pattern.test(movieName)) {
       getMovieById(movieName);
     } else {
@@ -43,7 +43,9 @@ const Searchbar = ({ toggleHeader }) => {
   const getMoviesByName = async (name) => {
     const url = `//www.omdbapi.com/?apikey=${apiKey}&s=${name}`;
     const response = await axios.get(url);
-    setSearchResults(response.data.Search);
+    response.data.Error
+      ? setSearchResults([response.data])
+      : setSearchResults(response.data.Search);
   };
 
   const getMovieById = async (id) => {
