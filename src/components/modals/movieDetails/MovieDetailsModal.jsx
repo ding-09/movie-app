@@ -6,6 +6,10 @@ import { TbHeartOff } from 'react-icons/tb';
 import { AiFillStar } from 'react-icons/ai';
 import { BsDot } from 'react-icons/bs';
 import { useMovies } from '../../../providers/MoviesProvider';
+import {
+  setFavoriteMovie,
+  removeFavoriteMovie,
+} from '../../../utils/favorites';
 
 const MovieDetailsModal = ({ movieData, closeModal }) => {
   const {
@@ -35,20 +39,20 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
     }
   };
 
-  // add to storage
-  const addToStorage = (movie) => {
-    const movies = JSON.parse(localStorage.getItem('favorites')) ?? [];
-    movies.push(movie);
-    localStorage.setItem('favorites', JSON.stringify(movies));
-  };
+  // // add to storage
+  // const addToStorage = (movie) => {
+  //   const movies = JSON.parse(localStorage.getItem('favorites')) ?? [];
+  //   movies.push(movie);
+  //   localStorage.setItem('favorites', JSON.stringify(movies));
+  // };
 
-  const removeFromStorage = (movie) => {
-    const movies = JSON.parse(localStorage.getItem('favorites')) ?? [];
-    const newMovies = movies.filter(
-      (storedMovie) => storedMovie.imdbID !== movie.imdbID
-    );
-    localStorage.setItem('favorites', JSON.stringify(newMovies));
-  };
+  // const removeFromStorage = (movie) => {
+  //   const movies = JSON.parse(localStorage.getItem('favorites')) ?? [];
+  //   const newMovies = movies.filter(
+  //     (storedMovie) => storedMovie.imdbID !== movie.imdbID
+  //   );
+  //   localStorage.setItem('favorites', JSON.stringify(newMovies));
+  // };
 
   // toggle button state
   const toggleBtn = () => {
@@ -76,7 +80,7 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
             className='btn fav-btn'
             onClick={() => {
               addMovieWithCheck(movieData);
-              addToStorage(movieData);
+              setFavoriteMovie(movieData);
               toggleBtn();
             }}
           >
@@ -88,7 +92,7 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
             className='btn remove-btn'
             onClick={() => {
               removeMovie(movieData);
-              removeFromStorage(movieData);
+              removeFavoriteMovie(movieData);
               toggleBtn();
             }}
           >
