@@ -5,7 +5,7 @@ import MovieDetailsModal from '../movieDetails';
 import useMovieModal from '../../../hooks/useMovieModal';
 
 const ListItem = ({ movie }) => {
-  const [movieData, showModal, openModal, closeModal] = useMovieModal();
+  const [movieData, openModal, closeModal] = useMovieModal();
   const [modal, setModal] = useState(false);
   return (
     <ListItemContainer

@@ -6,7 +6,8 @@ const FavoritesPage = () => {
   return (
     <>
       <h2 className='sub-heading'>My Favorites</h2>
-      {movies && movies.map((movie) => <FavoriteMovie movie={movie} />)}
+      {movies &&
+        movies.map((movie, idx) => <FavoriteMovie movie={movie} key={idx} />)}
     </>
   );
 };
