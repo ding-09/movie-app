@@ -11,6 +11,7 @@ export const ModalContainer = styled.div`
   padding: 4.8rem;
   min-height: 100vh;
   background-color: rgba(27, 27, 27, 0.99);
+  color: var(--primary-white);
   svg {
     position: absolute;
     top: 2rem;
