@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { MoviesProvider } from './providers/MoviesProvider';
 import Header from './components/header';
 import Footer from './components/footer';
@@ -8,7 +8,7 @@ import FavoritesPage from './pages/favorites';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <MoviesProvider>
         <Header />
         <main>
@@ -20,7 +20,7 @@ const App = () => {
         </main>
         <Footer />
       </MoviesProvider>
-    </BrowserRouter>
+    </Router>
   );
 };
 
