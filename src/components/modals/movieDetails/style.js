@@ -114,7 +114,7 @@ export const MainInfo = styled.section`
       margin-top: 0;
     }
     @media screen and (min-width: 1200px) {
-      font-size: 2.4rem;
+      font-size: 2.8rem;
     }
   }
   .misc-info {

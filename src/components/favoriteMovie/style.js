@@ -86,21 +86,22 @@ export const MovieInfo = styled.section`
       font-size: 1.5rem;
     }
   }
-  .like-btn {
-    position: absolute;
-    top: 1.2rem;
-    right: 1.2rem;
-    border: none;
-    background: none;
-    svg {
-      color: var(--primary-red);
-      font-size: 1.6rem;
-      @media screen and (min-width: 768px) {
-        font-size: 1.8rem;
-      }
-      @media screen and (min-width: 1200px) {
-        font-size: 2.4rem;
-      }
+`;
+
+export const Button = styled.button`
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  border: none;
+  background: none;
+  svg {
+    color: var(--primary-red);
+    font-size: 1.6rem;
+    @media screen and (min-width: 768px) {
+      font-size: 1.8rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 2.4rem;
     }
   }
 `;

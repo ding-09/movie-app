@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { ItemContainer, Figure, MovieInfo } from './style';
-import blankImg from '../../assets/No-Image-Placeholder.svg.png';
+import { ItemContainer, Figure, MovieInfo, Button } from './style';
 import { IoIosHeart } from 'react-icons/io';
 import { BsDot } from 'react-icons/bs';
 import useMovieModal from '../../hooks/useMovieModal';
@@ -33,7 +32,7 @@ const FavoriteMovie = ({ movie }) => {
           <span>Cast: </span>
           {Actors}
         </p>
-        <button className='like-btn'>
+        <Button className='like-btn'>
           <IoIosHeart
             onClick={(e) => {
               e.stopPropagation();
@@ -41,7 +40,7 @@ const FavoriteMovie = ({ movie }) => {
               removeFavoriteMovie(movie);
             }}
           />
-        </button>
+        </Button>
       </MovieInfo>
     </ItemContainer>
   );
