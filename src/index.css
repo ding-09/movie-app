@@ -83,4 +83,8 @@ ul {
   main {
     padding: 5rem;
   }
+  .sub-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
 }

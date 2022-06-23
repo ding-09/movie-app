@@ -7,7 +7,7 @@ export const Container = styled.div`
     justify-content: space-between;
   }
   @media screen and (min-width: 1200px) {
-      justify-content: flex-start;
-      gap: 0.5rem;
+    justify-content: flex-start;
+    gap: 2rem;
   }
 `;

@@ -13,7 +13,7 @@ export const ItemContainer = styled.article`
     width: 49%;
   }
   @media screen and (min-width: 1200px) {
-    width: 33%;
+    min-height: 15rem;
   }
 `;
 
@@ -25,6 +25,14 @@ export const Figure = styled.figure`
     max-width: 7rem;
     min-height: 10rem;
     border-radius: 0.5rem;
+    @media screen and (min-width: 768px) {
+      max-width: 9rem;
+      height: 12rem;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 13rem;
+      height: 18rem;
+    }
   }
 `;
 
@@ -36,15 +44,31 @@ export const MovieInfo = styled.section`
   justify-content: space-between;
   max-width: 65%;
   min-width: 65%;
+  @media screen and (min-width: 768px) {
+    justify-content: space-around;
+    margin-left: 2rem;
+  }
   .movie-title {
     font-size: 1.4rem;
+    @media screen and (min-width: 768px) {
+      font-size: 1.6rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 2rem;
+    }
   }
   .misc-info {
-    opacity: 0.8;
+    opacity: 0.6;
     display: flex;
     align-items: center;
     svg {
       font-size: 1.5rem;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 1.1rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 1.4rem;
     }
   }
   .cast-info {
@@ -54,6 +78,12 @@ export const MovieInfo = styled.section`
     font-size: 1.1rem;
     span {
       opacity: 0.6;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 1.2rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 1.5rem;
     }
   }
   .like-btn {
@@ -65,6 +95,12 @@ export const MovieInfo = styled.section`
     svg {
       color: var(--primary-red);
       font-size: 1.6rem;
+      @media screen and (min-width: 768px) {
+        font-size: 1.8rem;
+      }
+      @media screen and (min-width: 1200px) {
+        font-size: 2.4rem;
+      }
     }
   }
 `;

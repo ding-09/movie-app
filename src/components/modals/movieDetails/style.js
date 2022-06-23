@@ -19,8 +19,8 @@ export const ModalContainer = styled.div`
     font-size: 1.6rem;
     @media screen and (min-width: 768px) {
       font-size: 2rem;
-      top: 2.4rem;
-      right: 2.4rem;
+      top: 3rem;
+      right: 3.5rem;
     }
     @media screen and (min-width: 992px) {
       font-size: 2rem;
