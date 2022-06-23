@@ -57,7 +57,7 @@ export const MainInfo = styled.section`
       position: relative;
       top: 0;
       left: 0;
-      fill: #FFC700;
+      fill: #ffc700;
       font-size: 1.4rem;
     }
     .rated {
@@ -68,7 +68,7 @@ export const MainInfo = styled.section`
       opacity: 0.5;
     }
   }
-  .fav-btn {
+  .btn {
     grid-area: button;
     padding: 0.5rem 0;
     border-radius: 0.2rem;
@@ -76,15 +76,20 @@ export const MainInfo = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--secondary-red);
     color: var(--primary-white);
-    font-weight: 600;
     svg {
       position: relative;
       top: 0;
       right: 0.7rem;
-      fill: var(--primary-white);
     }
+  }
+  .fav-btn {
+    background-color: var(--secondary-red);
+    fill: var(--primary-white);
+    font-weight: 600;
+  }
+  .remove-btn {
+    background-color: var(--primary-text);
   }
   .line {
     grid-area: line;

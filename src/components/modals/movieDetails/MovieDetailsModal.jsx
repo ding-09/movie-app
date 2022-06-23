@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ModalContainer, Figure, MainInfo, SubInfo } from './style';
 import { FaTimes } from 'react-icons/fa';
 import { IoIosHeart } from 'react-icons/io';
+import { TbHeartOff } from 'react-icons/tb'
 import { AiFillStar } from 'react-icons/ai';
 import { useMovies } from '../../../providers/MoviesProvider';
 
@@ -19,6 +20,8 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
     imdbRating,
   } = movieData;
 
+  const [favBtn, showFavBtn] = useState(true);
+
   // MOVIES CONTEXT
   const { addMovie } = useMovies();
 
@@ -27,6 +30,11 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
     const movies = JSON.parse(localStorage.getItem('favorites')) ?? [];
     movies.push(movie);
     localStorage.setItem('favorites', JSON.stringify(movies));
+  };
+
+  // toggle button state
+  const toggleBtn = () => {
+    showFavBtn(!favBtn);
   };
 
   return (
@@ -45,16 +53,30 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
           <span className='rated'>{imdbRating} </span>
           <span className='total'> / 10</span>
         </div>
-        <button
-          className='fav-btn'
-          onClick={() => {
-            addMovie(movieData);
-            addToStorage(movieData);
-          }}
-        >
-          <IoIosHeart />
-          Add to favorites
-        </button>
+        {favBtn ? (
+          <button
+            className='btn fav-btn'
+            onClick={() => {
+              addMovie(movieData);
+              addToStorage(movieData);
+              toggleBtn();
+            }}
+          >
+            <IoIosHeart />
+            Add to favorites
+          </button>
+        ) : (
+          <button
+            className='btn remove-btn'
+            onClick={() => {
+              toggleBtn();
+            }}
+          >
+            <TbHeartOff />
+            Remove from favorites
+          </button>
+        )}
+
         <div className='line'></div>
       </MainInfo>
       <SubInfo>
