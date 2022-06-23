@@ -18,17 +18,40 @@ export const ModalContainer = styled.div`
     right: 1.8rem;
     font-size: 1.6rem;
   }
+
+  @media screen and (min-width: 480px) {
+    padding: 5rem 10rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 8rem 10rem;
+    display: grid;
+    grid-template-areas:
+      'mainInfo mainInfo'
+      'poster subInfo';
+  }
 `;
 
 export const Figure = styled.figure`
+  grid-area: poster;
   margin-bottom: 1.4rem;
   img {
     width: 30rem;
     max-height: 35rem;
+    @media screen and (min-width: 400px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 768px) {
+      width: 40rem;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 4rem;
   }
 `;
 
 export const MainInfo = styled.section`
+  grid-area: mainInfo;
   display: grid;
   margin: 1.4rem 0 1.6rem;
   grid-template-areas:
@@ -36,6 +59,13 @@ export const MainInfo = styled.section`
     'line line line'
     'miscInfo miscInfo rating'
     'title title title';
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-areas:
+      'title title title button'
+      'miscInfo rating . .'
+      'line line line line';
+  }
   .movie-title {
     grid-area: title;
     padding: 0;
@@ -74,10 +104,14 @@ export const MainInfo = styled.section`
     .total {
       opacity: 0.5;
     }
+
+    @media screen and (min-width: 768px) {
+      justify-self: start;
+    }
   }
   .btn {
     grid-area: button;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.5rem;
     border-radius: 0.2rem;
     border: none;
     display: flex;
@@ -88,6 +122,10 @@ export const MainInfo = styled.section`
       position: relative;
       top: 0;
       right: 0.7rem;
+    }
+    @media screen and (min-width: 768px) {
+      height: 3rem;
+      align-self: center;
     }
   }
   .fav-btn {
@@ -108,6 +146,7 @@ export const MainInfo = styled.section`
 `;
 
 export const SubInfo = styled.section`
+  grid-area: subInfo;
   .plot {
     margin-bottom: 2rem;
     line-height: 1.6;
