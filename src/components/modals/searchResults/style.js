@@ -7,12 +7,13 @@ export const Modal = styled.section`
   left: 0;
   z-index: 999;
   min-width: 100%;
-  .error  {
+  .error {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 20vh;
     color: var(--secondary-red);
+    font-size: 2rem;
   }
 `;
 
@@ -26,6 +27,14 @@ export const Figure = styled.figure`
   max-width: 5rem;
   max-height: 7rem;
   margin-right: 1rem;
+  @media screen and (min-width: 768px) {
+    max-width: 7rem;
+    max-height: 10rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 `;
 
 export const MovieInfoContainer = styled.div`
@@ -47,6 +56,19 @@ export const MovieInfoContainer = styled.div`
   .type {
     text-transform: capitalize;
     font-size: 1.2rem;
-    opacity: 0.8;
+    opacity: 0.6;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-around;
+    h1 {
+      font-size: 1.6rem;
+    }
+    .year {
+      font-size: 1.5rem;
+    }
+    .type {
+      font-size: 1.4rem;
+    }
   }
 `;
