@@ -1,32 +1,32 @@
 import { createContext, useContext, useState } from 'react';
 
-const FavoritesContext = createContext();
+const MoviesContext = createContext();
 
-const FavoritesProvider = ({ children }) => {
-  const [favMovies, setFavMovies] = useState([]);
+const MoviesProvider = ({ children }) => {
+  const [movies, setMovies] = useState([]);
 
   const addMovie = (movie) => {
-    setFavMovies([...favMovies, movie]);
+    setMovies([...movies, movie]);
     return movies;
   };
 
   const removeMovie = (movieTitle) => {
-    setFavMovies(movies.filter((movie) => movie.Title !== movieTitle));
+    setMovies(movies.filter((movie) => movie.Title !== movieTitle));
     return movies;
   };
 
-  const value = { favMovies, addMovie, removeMovie };
+  const value = { movies, addMovie, removeMovie };
   return (
     <MoviesContext.Provider value={value}>{children}</MoviesContext.Provider>
   );
 };
 
 const useMovies = () => {
-  const context = useContext(FavoritesContext);
+  const context = useContext(MoviesContext);
   if (context === undefined) {
     throw new Error('useMovies must be used within a FavoritesProvider');
   }
   return context;
 };
 
-export { FavoritesProvider, useMovies };
+export { MoviesProvider, useMovies };
