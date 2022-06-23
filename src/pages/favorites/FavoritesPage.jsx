@@ -1,9 +1,11 @@
 import React from 'react';
 import FavoriteMovie from '../../components/favoriteMovie';
 import { Container } from './style';
+import { useMovies } from '../../providers/MoviesProvider';
 
 const FavoritesPage = () => {
-  const movies = JSON.parse(localStorage.getItem('favorites'));
+  const { movies } = useMovies();
+
   return (
     <>
       <h2 className='sub-heading'>My Favorites</h2>
