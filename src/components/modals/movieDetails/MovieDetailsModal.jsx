@@ -24,7 +24,16 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
   const [favBtn, showFavBtn] = useState(true);
 
   // MOVIES CONTEXT
-  const { addMovie, removeMovie } = useMovies();
+  const { movies, addMovie, removeMovie } = useMovies();
+
+  // add movie with validation
+  const addMovieWithCheck = (movie) => {
+    if (movies.some((m) => m.imdbID === movie.imdbID)) {
+      return;
+    } else {
+      addMovie(movie);
+    }
+  };
 
   // add to storage
   const addToStorage = (movie) => {
@@ -66,7 +75,7 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
           <button
             className='btn fav-btn'
             onClick={() => {
-              addMovie(movieData);
+              addMovieWithCheck(movieData);
               addToStorage(movieData);
               toggleBtn();
             }}
