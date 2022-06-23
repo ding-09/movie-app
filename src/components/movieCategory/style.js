@@ -16,6 +16,24 @@ export const Container = styled.div`
       min-width: 100%;
       height: 20rem;
     }
+    @media screen and (min-width: 480px) {
+      max-width: 20rem;
+      img {
+        height: 30rem;
+      }
+    }
+    @media screen and (min-width: 992px){
+      max-width: 25rem;
+      img {
+        height: 35rem;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 30rem;
+      img {
+        height: 40rem;
+      }
+    }
   }
   .swiper-button-next,
   .swiper-button-prev {

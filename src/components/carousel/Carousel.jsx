@@ -14,11 +14,6 @@ const Carousel = ({ children }) => {
       slidesPerGroup={2}
       loop={true}
       loopFillGroupWithBlank={true}
-      breakpoints={{
-        480: {
-          slidesPerView: 3,
-        },
-      }}
       navigation={true}
       modules={[Navigation]}
       className='swiper-container'
