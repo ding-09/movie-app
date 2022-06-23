@@ -15,7 +15,6 @@ export const ModalContainer = styled(motion.div)`
   color: var(--primary-white);
   svg {
     cursor: pointer;
-
     position: absolute;
     top: 2rem;
     right: 1.8rem;

@@ -6,6 +6,9 @@ export const Container = styled.div`
   .movie-title {
     margin-top: 1rem;
     padding: 0 0.5rem;
+    @media screen and (min-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 
   /* CAROUSEL STYLES */
@@ -22,7 +25,7 @@ export const Container = styled.div`
         height: 30rem;
       }
     }
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: 992px) {
       max-width: 28rem;
       img {
         height: 35rem;
