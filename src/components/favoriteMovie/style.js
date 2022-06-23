@@ -97,6 +97,8 @@ export const Button = styled.button`
   svg {
     color: var(--primary-red);
     font-size: 1.6rem;
+    cursor: pointer;
+
     @media screen and (min-width: 768px) {
       font-size: 1.8rem;
     }

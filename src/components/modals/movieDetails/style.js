@@ -14,6 +14,8 @@ export const ModalContainer = styled(motion.div)`
   background-color: rgba(27, 27, 27, 0.99);
   color: var(--primary-white);
   svg {
+    cursor: pointer;
+
     position: absolute;
     top: 2rem;
     right: 1.8rem;
@@ -50,7 +52,6 @@ export const ModalContainer = styled(motion.div)`
   @media screen and (min-width: 992px) {
     padding: 10rem 14rem;
   }
-
 `;
 
 export const Figure = styled.figure`
@@ -170,6 +171,7 @@ export const MainInfo = styled.section`
     align-items: center;
     justify-content: center;
     color: var(--primary-white);
+    cursor: pointer;
     svg {
       position: relative;
       top: 0;
