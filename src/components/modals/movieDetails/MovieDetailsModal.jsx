@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ModalContainer, Figure, MainInfo, SubInfo } from './style';
 import { FaTimes } from 'react-icons/fa';
 import { IoIosHeart } from 'react-icons/io';
@@ -39,25 +39,20 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
     }
   };
 
-  // // add to storage
-  // const addToStorage = (movie) => {
-  //   const movies = JSON.parse(localStorage.getItem('favorites')) ?? [];
-  //   movies.push(movie);
-  //   localStorage.setItem('favorites', JSON.stringify(movies));
-  // };
-
-  // const removeFromStorage = (movie) => {
-  //   const movies = JSON.parse(localStorage.getItem('favorites')) ?? [];
-  //   const newMovies = movies.filter(
-  //     (storedMovie) => storedMovie.imdbID !== movie.imdbID
-  //   );
-  //   localStorage.setItem('favorites', JSON.stringify(newMovies));
-  // };
-
   // toggle button state
   const toggleBtn = () => {
     showFavBtn(!favBtn);
   };
+
+  // set initial button state
+  useEffect(() => {
+    // check if movie is favorited
+    if (movies.some((m) => m.imdbID === movieData.imdbID)) {
+      // if this conditional is true,
+      // that means there is a match against localStorage
+      toggleBtn(!favBtn);
+    }
+  }, []);
 
   return (
     <ModalContainer>

@@ -6,10 +6,10 @@ const MoviesContext = createContext();
 const MoviesProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
 
-  // useEffect(() => {
-  //   const storage = getFavoriteMovies();
-  //   setMovies(storage);
-  // }, []);
+  useEffect(() => {
+    const storage = getFavoriteMovies();
+    setMovies(storage);
+  }, []);
 
   const addMovie = (movie) => {
     setMovies([...movies, movie]);
