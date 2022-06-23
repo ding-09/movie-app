@@ -48,7 +48,7 @@ export const MovieInfo = styled.section`
     justify-content: space-around;
     margin-left: 2rem;
   }
-  .movie-title {
+  .fav-movie-title {
     font-size: 1.4rem;
     @media screen and (min-width: 768px) {
       font-size: 1.6rem;

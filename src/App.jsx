@@ -15,7 +15,7 @@ const App = () => {
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/favorites' element={<FavoritesPage />} />
-            <Route path='*' element='Page not found!' />
+            <Route path='*' element={<div> Page Not Found!</div>} />
           </Routes>
         </main>
         <Footer />

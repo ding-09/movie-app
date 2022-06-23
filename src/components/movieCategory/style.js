@@ -7,14 +7,6 @@ export const Container = styled.div`
     margin-top: 1rem;
     padding: 0 0.5rem;
   }
-  @media screen and (min-width: 768px){
-    .movie-title {
-      font-size: 1.4rem;
-    }
-    .sub-heading {
-      font-size: 2rem;
-    }
-  }
 
   /* CAROUSEL STYLES */
   .swiper-slide {
@@ -31,17 +23,17 @@ export const Container = styled.div`
       }
     }
     @media screen and (min-width: 992px){
-      max-width: 25rem;
+      max-width: 28rem;
       img {
         height: 35rem;
       }
     }
-    @media screen and (min-width: 1200px) {
+    /* @media screen and (min-width: 1200px) {
       max-width: 30rem;
       img {
         height: 40rem;
       }
-    }
+    } */
   }
   .swiper-button-next,
   .swiper-button-prev {

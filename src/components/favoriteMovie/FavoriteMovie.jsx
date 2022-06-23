@@ -24,7 +24,7 @@ const FavoriteMovie = ({ movie }) => {
         <img src={Poster} alt='' />
       </Figure>
       <MovieInfo>
-        <h3 className='movie-title'>{Title}</h3>
+        <h3 className='fav-movie-title'>{Title}</h3>
         <div className='misc-info'>
           {Year} <BsDot /> {Rated} <BsDot /> {Runtime} <BsDot /> {Type}
         </div>
