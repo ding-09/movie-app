@@ -8,6 +8,7 @@ export const Container = styled.article`
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 1px 3px 0px rgba(255, 255, 255, 0.1);
   margin-bottom: 1.2rem;
+  position: relative;
 `;
 
 export const Figure = styled.figure`
@@ -24,22 +25,35 @@ export const Figure = styled.figure`
 export const MovieInfo = styled.section`
   margin-left: 1.2rem;
   padding: 1.2rem 2.4rem 1.3rem 0;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 65%;
+  min-width: 65%;
+  .movie-title {
+    font-size: 1.4rem;
+  }
   .misc-info {
     opacity: 0.8;
+    display: flex;
+    align-items: center;
+    svg {
+      font-size: 1.5rem;
+    }
   }
   .cast-info {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.1rem;
     span {
       opacity: 0.6;
     }
   }
   .like-btn {
     position: absolute;
-    top: 0.8rem;
-    right: 0.8rem;
+    top: 1.2rem;
+    right: 1.2rem;
     border: none;
     background: none;
     svg {
