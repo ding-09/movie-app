@@ -1,14 +1,20 @@
 import styled from 'styled-components';
 
-export const Container = styled.article`
+export const ItemContainer = styled.article`
   min-height: 10rem;
   display: flex;
   border-radius: 0.5rem;
-  background-color: #121212;
+  background-color: var(--secondary-text);
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 1px 3px 0px rgba(255, 255, 255, 0.1);
   margin-bottom: 1.2rem;
   position: relative;
+  @media screen and (min-width: 768px) {
+    width: 49%;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 33%;
+  }
 `;
 
 export const Figure = styled.figure`

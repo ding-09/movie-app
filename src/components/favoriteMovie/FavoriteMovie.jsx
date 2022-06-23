@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Figure, MovieInfo } from './style';
+import { ItemContainer, Figure, MovieInfo } from './style';
 import blankImg from '../../assets/No-Image-Placeholder.svg.png';
 import { IoIosHeart } from 'react-icons/io';
 import { BsDot } from 'react-icons/bs';
@@ -11,7 +11,7 @@ const FavoriteMovie = ({ movie }) => {
   const [movieData, showModal, openModal, closeModal] = useMovieModal();
   const [modal, setModal] = useState(false);
   return (
-    <Container
+    <ItemContainer
       onClick={() => {
         setModal(!modal);
       }}
@@ -33,7 +33,7 @@ const FavoriteMovie = ({ movie }) => {
           <IoIosHeart />
         </button>
       </MovieInfo>
-    </Container>
+    </ItemContainer>
   );
 };
 
