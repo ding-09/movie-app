@@ -37,7 +37,7 @@ export const Container = styled.div`
   }
   .swiper-button-next,
   .swiper-button-prev {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(100, 100, 100, 0.8);
     color: var(--primary-white);
     border-radius: 0.2rem;
     &:after {
