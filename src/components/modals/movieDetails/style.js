@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const ModalContainer = styled.div`
+export const ModalContainer = styled(motion.div)`
   position: fixed;
   overflow: auto;
   z-index: 999999;

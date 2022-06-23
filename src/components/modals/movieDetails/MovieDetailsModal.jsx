@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { ModalContainer, Figure, MainInfo, SubInfo } from './style';
 import { FaTimes } from 'react-icons/fa';
 import { IoIosHeart } from 'react-icons/io';
@@ -55,7 +56,14 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
   }, []);
 
   return (
-    <ModalContainer>
+    <ModalContainer
+      animate={{
+        scale: [0, 1],
+      }}
+      transition={{
+        duration: 0.5,
+      }}
+    >
       <FaTimes onClick={closeModal} />
       <Figure>
         <img src={Poster} alt='Movie Title' />
