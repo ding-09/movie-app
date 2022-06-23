@@ -48,12 +48,9 @@ export const ModalContainer = styled(motion.div)`
   }
 
   @media screen and (min-width: 992px) {
-    padding: 10rem 12rem;
+    padding: 10rem 14rem;
   }
 
-  @media screen and (min-width: 1200px) {
-    padding: 14rem 16rem;
-  }
 `;
 
 export const Figure = styled.figure`
