@@ -3,19 +3,21 @@ import { Container, Figure, MovieInfo } from './style';
 import blankImg from '../../assets/No-Image-Placeholder.svg.png';
 import { IoIosHeart } from 'react-icons/io';
 
-const FavoriteMovie = () => {
+const FavoriteMovie = ({ movie }) => {
+  const { Title, Runtime, Year, Rated, Actors, Poster, Type } = movie;
   return (
     <Container>
       <Figure>
-        <img src={blankImg} alt='' />
+        <img src={Poster} alt='' />
       </Figure>
       <MovieInfo>
-        <h3 className='movie-title'>Movie Name</h3>
+        <h3 className='movie-title'>{Title}</h3>
         <div className='misc-info'>
-          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+          {Year} - {Rated} - {Runtime} - {Type}
         </div>
         <p className='cast-info'>
-          <span>Cast:</span> Actor1, Actor2, Actor3
+          <span>Cast:</span>
+          {Actors}
         </p>
         <button className='like-btn'>
           <IoIosHeart />

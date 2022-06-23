@@ -7,6 +7,7 @@ export const Container = styled.article`
   background-color: #121212;
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 1px 3px 0px rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.2rem;
 `;
 
 export const Figure = styled.figure`
