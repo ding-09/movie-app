@@ -15,7 +15,7 @@ const FavoriteMovie = ({ movie }) => {
   const { removeMovie } = useMovies();
   return (
     <ItemContainer
-      onClick={() => {
+      onClick={(e) => {
         setModal(!modal);
       }}
     >

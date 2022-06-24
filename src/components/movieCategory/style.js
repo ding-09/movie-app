@@ -15,6 +15,7 @@ export const Container = styled.div`
   .swiper-slide {
     text-align: center;
     max-width: 16.5rem;
+    cursor: pointer;
     img {
       min-width: 100%;
       height: 20rem;
@@ -27,6 +28,7 @@ export const Container = styled.div`
     }
     @media screen and (min-width: 992px) {
       max-width: 28rem;
+      min-width: 28rem;
       img {
         height: 35rem;
       }

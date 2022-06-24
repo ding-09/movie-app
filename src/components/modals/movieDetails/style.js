@@ -97,9 +97,9 @@ export const MainInfo = styled.section`
     column-gap: 4rem;
   }
   @media screen and (min-width: 880px) {
-    column-gap: 10rem;
+    column-gap: 6rem;
   }
-  .movie-title {
+  h1.movie-title {
     grid-area: title;
     padding: 0;
     margin-top: 1.4rem;

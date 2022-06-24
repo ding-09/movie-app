@@ -63,6 +63,7 @@ export const MovieInfoContainer = styled.div`
     justify-content: space-around;
     h1 {
       font-size: 1.6rem;
+      max-width: 100%;
     }
     .year {
       font-size: 1.5rem;

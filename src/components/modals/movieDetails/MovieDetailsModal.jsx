@@ -81,10 +81,10 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
         {favBtn ? (
           <button
             className='btn fav-btn'
-            onClick={() => {
+            onClick={(e) => {
               addMovieWithCheck(movieData);
               setFavoriteMovie(movieData);
-              toggleBtn();
+              toggleBtn(e);
             }}
           >
             <IoIosHeart />
@@ -93,7 +93,8 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
         ) : (
           <button
             className='btn remove-btn'
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation();
               removeMovie(movieData);
               removeFavoriteMovie(movieData);
               toggleBtn();

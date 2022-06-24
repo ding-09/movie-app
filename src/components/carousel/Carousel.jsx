@@ -13,7 +13,7 @@ const Carousel = ({ children }) => {
       spaceBetween={10}
       slidesPerGroup={2}
       loop={true}
-      loopFillGroupWithBlank={true}
+      loopFillGroupWithBlank={false}
       navigation={true}
       modules={[Navigation]}
       className='swiper-container'
