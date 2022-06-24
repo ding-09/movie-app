@@ -15,7 +15,7 @@ const FavoriteMovie = ({ movie }) => {
   const { removeMovie } = useMovies();
   return (
     <ItemContainer
-      onClick={(e) => {
+      onClick={() => {
         setModal(!modal);
       }}
     >
@@ -35,7 +35,6 @@ const FavoriteMovie = ({ movie }) => {
         <Button className='like-btn'>
           <IoIosHeart
             onClick={(e) => {
-              e.stopPropagation();
               removeMovie(movie);
               removeFavoriteMovie(movie);
             }}

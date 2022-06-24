@@ -94,7 +94,7 @@ const MovieDetailsModal = ({ movieData, closeModal }) => {
           <button
             className='btn remove-btn'
             onClick={(e) => {
-              e.stopPropagation();
+              closeModal();
               removeMovie(movieData);
               removeFavoriteMovie(movieData);
               toggleBtn();
